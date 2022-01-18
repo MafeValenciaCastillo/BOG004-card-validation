@@ -13,14 +13,14 @@
       <form action="" class="fomulario" id="formulario">
         <!-- grupo de nombre -->
         <div class="formulario__grupo" id="grupo__nombre">
-          <label for="nombre" class="formulario__label">usuario</label>
+          <label for="nombre" class="formulario__label">Usuario</label>
           <div class="formulario__grupo-input">
             <input
               type="text"
               class="formulario__input"
               name="nombre"
               id="nombre"
-              placeholder="jhon123"
+              placeholder="jhon123" required
             />
           </div>
           <p class="formulario__input-error">
@@ -59,14 +59,14 @@
             />
           </div>
           <p class="formulario__input-error">
-            Escribe el numero que aparece en la tarjeta.
+            Escribe el número que aparece en la tarjeta.
           </p>
         </div>
       </form>
-    </main>
+     <input type="button"  class="btn" value="validar" onclick="mostrarMensaje()"/>
+        </main>
     <footer>
-      <p>Derechos reservados</p>
-      <p>kiwibank</p>
+      <spam>Derechos reservados kiwibank</spam> 
     </footer>
     <script src="index.js" type="module"></script>
   </body>
