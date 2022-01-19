@@ -71,6 +71,10 @@ main{
 
     
 }
+.btn:hover{
+    background: #00ff0d;
+    color:#000;
+}
 footer {
     display: flex;
     justify-content: center;
