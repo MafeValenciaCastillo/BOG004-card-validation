@@ -40,7 +40,7 @@
               placeholder="jhon123"
             />
           </div>
-          <p class="formulario__input-error">
+          <p class="formulario__input-error  error">
             El apellido debe ser el que aparece en tu tarjeta
           </p>
         </div>
@@ -58,13 +58,14 @@
               id="password"
             />
           </div>
-          <p class="formulario__input-error">
+          <p class="formulario__input-error ">
             Escribe el número que aparece en la tarjeta.
           </p>
+          <ul class="error"></ul>
         </div>
-      </form>
-     <input type="button"  class="btn" value="validar" onclick="mostrarMensaje()"/>
-        </main>
+     <input type="submit"  class="btn" id="btnEnviar" value="enviar" onclick="mostrarMensaje()"/>
+    </form> 
+    </main>
     <footer>
       <spam>Derechos reservados kiwibank</spam> 
     </footer>

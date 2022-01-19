@@ -2,20 +2,21 @@ import validator from "./validator.js";
 const mostrarMensaje = (e) => {
   e.preventDefault();
   const numeroDetarjeta = document.getElementById("grupo__password").value;
-
+     const error = document.getElementById('error');
   if (numeroDetarjeta == "" || numeroDetarjeta == null) {
-    console.log("por favor diligencia todos los campos");
+    console.log('<li>por favor diligencia todos los campos;</li>');
     error.style.display = "block";
-    error.innerHTML += "por favor diligencia todos los campos";
+    error.innerHTML += '<li>por favor diligencia todos los campos;</li>'
   }
   if (numeroDetarjeta.length == 16) {
-    todo_correcto = false;
+    console.log('entre al primer if');
   }
   if (isNaN(numeroDetarjeta)) {
-    
-    todo_correcto = false;
+    console.log('entre al segundo if');
+ 
   }
 
   console.log(validator.isValid(numeroDetarjeta));
 };
+const formulario = document.getElementById('formulario');
 formulario.addEventListener("submit", mostrarMensaje);
