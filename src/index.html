@@ -20,7 +20,8 @@
               class="formulario__input"
               name="nombre"
               id="nombre"
-              placeholder="jhon123" required
+              placeholder="jhon123"
+              required
             />
           </div>
           <p class="formulario__input-error">
@@ -37,10 +38,11 @@
               class="formulario__input"
               name="apellido"
               id="apellido"
-              placeholder="jhon123" required
+              placeholder="jhon123"
+              required
             />
           </div>
-          <p class="formulario__input-error  error">
+          <p class="formulario__input-error error">
             El apellido debe ser el que aparece en tu tarjeta
           </p>
         </div>
@@ -55,19 +57,25 @@
               type="password"
               class="formulario__input"
               name="password"
-              id="password" required
+              id="numeroTarjeta"
+              required
             />
           </div>
-          <p class="formulario__input-error ">
+          <p class="formulario__input-error">
             Escribe el número que aparece en la tarjeta.
           </p>
-          <ul class="error"></ul>
+          <ul id="error"></ul>
         </div>
-     <input type="submit"  class="btn" id="btnEnviar" value="Activar" onclick="mostrarMensaje()"/>
-    </form> 
+        <input
+          type="submit"
+          class="btn"
+          id="btnEnviar"
+          value="Activar"
+        />
+      </form>
     </main>
     <footer>
-      <spam>Derechos reservados kiwibank</spam> 
+      <spam>Derechos reservados kiwibank</spam>
     </footer>
     <script src="index.js" type="module"></script>
   </body>
