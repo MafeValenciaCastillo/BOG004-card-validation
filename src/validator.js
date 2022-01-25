@@ -45,7 +45,12 @@ const validator = {
 
   },
   maskify:(numeroDetarjetaEnletras) =>{
-   return  numeroDetarjetaEnletras
+   if (numeroDetarjetaEnletras.length < 16) return numeroDetarjetaEnletras;
+   const digitos = numeroDetarjetaEnletras.substr(-4);
+   const digitosEnNumeros = numeroDetarjetaEnletras.substr(0,1);
+   const umadigitos = numeroDetarjetaEnletras.substr(1, numeroDetarjetaEnletras.length -5).replace(/\d/g,'#');
+  
+   return'${digitosEnNumeros}${umadigitos}${digitos}';
   }
 
 };
