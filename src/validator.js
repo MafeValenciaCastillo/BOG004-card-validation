@@ -42,6 +42,12 @@ const validator = {
     console.log(sumatotal);
     // Verifica si la suma total es multiplo de 10
     return sumatotal % 10 == 0;
+
   },
+  maskify:(numeroDetarjetaEnletras) =>{
+   return  numeroDetarjetaEnletras
+  }
+
 };
+
 export default validator;
