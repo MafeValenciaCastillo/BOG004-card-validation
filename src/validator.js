@@ -4,9 +4,10 @@ const validator = {
     if (isNaN(numeroDetarjetaEnletras)) {
       return false;
     }
-    // una ves se recibe el numero y se convierte en un arregle de string
+    // una vez se recibe el numero y se convierte en un arregle de string
     const arregloDenumeros = numeroDetarjetaEnletras.split("");
     let convertirAnumero = arregloDenumeros.map((numero) => parseInt(numero));
+   
     console.log(convertirAnumero);
     // Crea un arreglo con números en posiciones pares multiplicados por dos
     const arregloMultiplicadoPorDos = convertirAnumero.map((numero, indice) => {
