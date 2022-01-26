@@ -25,5 +25,16 @@ const mostrarMensaje = (e) => {
     }
   }
 };
+const transformarTarjeta = () => {
+  const numeroTarjeta = document.getElementById("numeroTarjeta");
+  numeroTarjeta.value = validator.maskify(numeroTarjeta.value);
+};
+
+// Se agrega evento al formulario
 const formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", mostrarMensaje);
+
+// Se agrega evento al input
+const numeroTarjeta = document.getElementById("numeroTarjeta");
+numeroTarjeta.addEventListener("keyup", transformarTarjeta);
+numeroTarjeta.addEventListener("change", transformarTarjeta);
