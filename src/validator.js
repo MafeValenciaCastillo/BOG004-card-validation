@@ -49,7 +49,7 @@ const validator = {
     return numeroDetarjetaEnletras.split('').map((digito, indice) => indice < numeroDetarjetaEnletras.length - 4 ? '#' : digito).join('');
    
   }
-
+  
 };
 
 export default validator;
