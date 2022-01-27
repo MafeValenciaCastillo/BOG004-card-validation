@@ -54,10 +54,11 @@
             <input
               type="text"
               class="formulario__input"
-              name="number"
+              name="masknumber"
               id="numeroTarjeta"
               required 
             />
+            <input type="text" name="number" style="display:none;">
           </div>
           <p class="formulario__input-error">
             Escribe el número que aparece en la tarjeta.
@@ -69,7 +70,7 @@
           class="btn"
           id="btnEnviar"
           value="Activar"
-        />
+        />     
       </form>
       <div id="mask"></div>
       <p id="respuesta"></p>
