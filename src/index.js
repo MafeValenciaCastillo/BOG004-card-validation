@@ -1,23 +1,18 @@
 import validator from "./validator.js";
+let numeroDetarjetaGlobal;
 const mostrarMensaje = (e) => {
   e.preventDefault();
-  const numeroDetarjeta = document.getElementById("numeroTarjeta").value;
   const error = document.getElementById("error");
   const respuesta = document.getElementById("respuesta");
   respuesta.innerText = "";
-  if (numeroDetarjeta == "" || numeroDetarjeta == null) {
-    console.log("<li>por favor diligencia todos los campos;</li>");
+  if (numeroDetarjetaGlobal == "" || numeroDetarjetaGlobal == null) {
     error.style.display = "block";
-    error.innerHTML += "<li>por favor diligencia todos los campos;</li>";
-  } else if (numeroDetarjeta.length < 16) {
+  } else if (numeroDetarjetaGlobal.length < 16) {
     error.style.display = "block";
-    error.innerHTML += "<li>Número tarjeta pequeño;</li>";
-  } else if (isNaN(numeroDetarjeta)) {
+  } else if (isNaN(numeroDetarjetaGlobal)) {
     error.style.display = "block";
-    error.innerHTML += "<li>El número de tarjeta no es un número;</li>";
   } else {
-    const esValido = validator.isValid(numeroDetarjeta);
-
+    const esValido = validator.isValid(numeroDetarjetaGlobal);
     if (esValido) {
       respuesta.innerText = "!El número de tarjeta es válido!";
     } else {
@@ -27,6 +22,7 @@ const mostrarMensaje = (e) => {
 };
 const transformarTarjeta = () => {
   const numeroTarjeta = document.getElementById("numeroTarjeta");
+  numeroDetarjetaGlobal = numeroTarjeta.value;
   numeroTarjeta.value = validator.maskify(numeroTarjeta.value);
 };
 
@@ -34,7 +30,3 @@ const transformarTarjeta = () => {
 const formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", mostrarMensaje);
 
-// Se agrega evento al input
-const numeroTarjeta = document.getElementById("numeroTarjeta");
-numeroTarjeta.addEventListener("keyup", transformarTarjeta);
-numeroTarjeta.addEventListener("change", transformarTarjeta);
