@@ -7,7 +7,7 @@ const mostrarMensaje = (e) => {
   respuesta.innerText = "";
   if (numeroDetarjeta == "" || numeroDetarjeta == null) {
     console.log("<li>por favor diligencia todos los campos</li>");
-    error.style.display = "none";
+    error.style.display = "block";
     error.innerHTML += "<li>por favor diligencia todos los campos</li>";
   } else if (numeroDetarjeta.length < 16) {
     error.style.display = "none";
@@ -27,3 +27,4 @@ const mostrarMensaje = (e) => {
 };
 const formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", mostrarMensaje);
+

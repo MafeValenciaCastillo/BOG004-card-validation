@@ -5,14 +5,14 @@ const validator = {
       return false;
     }
     // una vez se recibe el numero y se convierte en un arregle de string
-    const arregloDenumeros = numeroDetarjetaEnletras.split("");
+    const arregloDenumeros = numeroDetarjetaEnletras.split("").reverse();
     let convertirAnumero = arregloDenumeros.map((numero) => parseInt(numero));
    
-    console.log(convertirAnumero);
+    console.log("convertirAnumero:" + convertirAnumero);
     // Crea un arreglo con números en posiciones pares multiplicados por dos
     const arregloMultiplicadoPorDos = convertirAnumero.map((numero, indice) => {
       // Verifica que la posición sea par
-      if (indice % 2 == 0) {
+      if (indice % 2 === 1) {
         numero = numero * 2;
         return numero;
       } else {
@@ -23,7 +23,7 @@ const validator = {
     // Crea un arreglo con números en posiciones pares mayores a 10 sumando sus digitos
     const arregloMayorADiez = arregloMultiplicadoPorDos.map((numero, indice) => {
       // Verifica que la posición sea par
-      if (indice % 2 == 0) {
+      if (indice % 2 === 1) {
         // Verifica que el número en la posición par sea mayor o igual a 10
         if (numero >= 10) {
           const digitos = numero.toString().split(""); // 14 => ["1", "4"];
@@ -37,7 +37,7 @@ const validator = {
         return numero;
       }
     });
-    console.log(arregloMayorADiez);
+    console.log("arregloMayorADiez:" + arregloMayorADiez);
     // Suma el total de los números del arreglo anterior
     let sumatotal = arregloMayorADiez.reduce((a, b) => a + b);
     console.log(sumatotal);
