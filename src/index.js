@@ -1,6 +1,7 @@
 import validator from "./validator.js";
-let numeroDetarjetaGlobal;
+let numeroDetarjetaGlobal = document.getElementById("numeroTarjeta").value;
 const mostrarMensaje = (e) => {
+  console.log(numeroDetarjetaGlobal)
   e.preventDefault();
   const error = document.getElementById("error");
   const respuesta = document.getElementById("respuesta");
@@ -10,11 +11,11 @@ const mostrarMensaje = (e) => {
     error.style.display = "block";
     error.innerHTML += "<li>por favor diligencia todos los campos</li>";
   } else if (numeroDetarjetaGlobal.length < 16) {
- 
     error.innerHTML += "<li>Número tarjeta demasiado corto</li>";
+
   } else if (isNaN(numeroDetarjetaGlobal)) {
-   
-    error.innerHTML += "<li>El número de tarjeta no es un número</li>";
+   error.innerHTML += "<li>El número de tarjeta no es un número</li>";
+
   } else {
     const esValido = validator.isValid(numeroDetarjetaGlobal);
     if (esValido) {
@@ -36,5 +37,5 @@ formulario.addEventListener("submit", mostrarMensaje);
 
 // Se agrega evento al input
 const numeroTarjeta = document.getElementById("numeroTarjeta");
-numeroTarjeta.addEventListener("keyup", transformarTarjeta);
+
 numeroTarjeta.addEventListener("change", transformarTarjeta);
