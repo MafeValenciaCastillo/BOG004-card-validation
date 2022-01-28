@@ -35,7 +35,8 @@ const transformarTarjeta = (evento) => {
   const numeroTarjeta = document.getElementById("numeroTarjeta");
   numeroDetarjetaGlobal = numeroTarjeta.value;
   numeroTarjeta.value = validator.maskify(numeroTarjeta.value);
-};
+  
+}
 
 // Se agrega evento al formulario
 const formulario = document.getElementById("formulario");
