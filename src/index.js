@@ -19,8 +19,14 @@ const mostrarMensaje = (e) => {
   } else {
     const esValido = validator.isValid(numeroDetarjetaGlobal);
     if (esValido) {
+      respuesta.className = '';
+      respuesta.classList.add("valido")
+      console.log(respuesta)
       respuesta.innerText = "!El número de tarjeta es válido!";
     } else {
+      respuesta.className = '';
+      respuesta.classList.add("invalido")
+      console.log(respuesta)
       respuesta.innerText = "!El número de tarjeta no es válido!";
     }
   }
@@ -39,3 +45,7 @@ formulario.addEventListener("submit", mostrarMensaje);
 const numeroTarjeta = document.getElementById("numeroTarjeta");
 
 numeroTarjeta.addEventListener("change", transformarTarjeta);
+
+
+
+

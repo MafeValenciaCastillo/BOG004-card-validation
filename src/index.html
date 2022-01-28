@@ -4,16 +4,39 @@
     <meta charset="utf-8" />
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&family=Poppins:ital,wght@0,600;1,500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>Kiwi Bank</h1>
+      <div class="menu-principal">
+        <h1>Kiwi Bank</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Productos</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
+      <img src="imagen/card.jpeg" alt="card">
+      <div class="caja-formulario">
       <form action="" class="fomulario" id="formulario">
         <!-- grupo de nombre -->
         <div class="formulario__grupo" id="grupo__nombre">
-          <label for="nombre" class="formulario__label">Nombre</label>
+          <label for="nombre" class="formulario__label">Nombre que aparece en tu tarjeta</label>
           <div class="formulario__grupo-input">
             <input
               type="text"
@@ -23,14 +46,12 @@
               required
             />
           </div>
-          <p class="formulario__input-error">
-            El nombre debe ser el que aparece en tu tarjeta
-          </p>
+         
         </div>
 
         <!-- grupo de apellido -->
         <div class="formulario__grupo" id="grupo__apellido">
-          <label for="apellido" class="formulario__label">Apellido</label>
+          <label for="apellido" class="formulario__label">Apellido que aparece en tu tarjeta</label>
           <div class="formulario__grupo-input">
             <input
               type="text"
@@ -39,16 +60,15 @@
               id="apellido"
               required
             />
+           
           </div>
-          <p class="formulario__input-error error">
-            El apellido debe ser el que aparece en tu tarjeta
-          </p>
+          
         </div>
 
         <!-- grupo de tarjeta-->
         <div class="formulario__grupo" id="grupo_password">
           <label for="text" class="formulario__label"
-            >Validador de tarjeta</label
+            >Número de tarjeta</label
           >
           <div class="formulario__grupo-input">
             <input
@@ -56,24 +76,22 @@
               class="formulario__input"
               name="masknumber"
               id="numeroTarjeta"
-              required 
-            />
-            <input type="text" name="number" style="display:none;">
+              required maxlength="16"
+              minlength="16"
+              
+            
+            /> 
+            <p id="respuesta"></p>
+            <input type="text" name="number" style="display: none"  />
           </div>
-          <p class="formulario__input-error">
-            Escribe el número que aparece en la tarjeta.
-          </p>
+          
           <ul id="error"></ul>
         </div>
-        <input
-          type="submit"
-          class="btn"
-          id="btnEnviar"
-          value="Activar"
-        />     
-      </form>
+        <input type="submit" class="btn" id="btnEnviar" value="Activar" />
+      </form> 
+    </div>
       <div id="mask"></div>
-      <p id="respuesta"></p>
+     
     </main>
     <footer>
       <spam>Derechos reservados Kiwi Bank</spam>
