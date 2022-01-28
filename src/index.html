@@ -31,70 +31,74 @@
       </div>
     </header>
     <main>
-      <img src="imagen/card.jpeg" alt="card">
+      <img src="imagen/card.jpeg" alt="card" />
       <div class="caja-formulario">
-      <form action="" class="fomulario" id="formulario">
-        <!-- grupo de nombre -->
-        <div class="formulario__grupo" id="grupo__nombre">
-          <label for="nombre" class="formulario__label">Nombre que aparece en tu tarjeta</label>
-          <div class="formulario__grupo-input">
-            <input
-              type="text"
-              class="formulario__input"
-              name="nombre"
-              id="nombre"
-              required
-            />
+        <form action="" class="fomulario" id="formulario">
+          <!-- grupo de nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label"
+              >Nombre que aparece en tu tarjeta</label
+            >
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="nombre"
+                id="nombre"
+                required
+              />
+            </div>
           </div>
-         
-        </div>
 
-        <!-- grupo de apellido -->
-        <div class="formulario__grupo" id="grupo__apellido">
-          <label for="apellido" class="formulario__label">Apellido que aparece en tu tarjeta</label>
-          <div class="formulario__grupo-input">
-            <input
-              type="text"
-              class="formulario__input"
-              name="apellido"
-              id="apellido"
-              required
-            />
-           
+          <!-- grupo de apellido -->
+          <div class="formulario__grupo" id="grupo__apellido">
+            <label for="apellido" class="formulario__label"
+              >Apellido que aparece en tu tarjeta</label
+            >
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="apellido"
+                id="apellido"
+                required
+              />
+            </div>
           </div>
-          
-        </div>
 
-        <!-- grupo de tarjeta-->
-        <div class="formulario__grupo" id="grupo_password">
-          <label for="text" class="formulario__label"
-            >Número de tarjeta</label
-          >
-          <div class="formulario__grupo-input">
-            <input
-              type="text"
-              class="formulario__input"
-              name="masknumber"
-              id="numeroTarjeta"
-              required maxlength="16"
-              minlength="16"
-              
-            
-            /> 
-            <p id="respuesta"></p>
-            <input type="text" name="number" style="display: none"  />
+          <!-- grupo de tarjeta-->
+          <div class="formulario__grupo" id="grupo_password">
+            <label for="text" class="formulario__label"
+              >Número de tarjeta</label
+            >
+            <div class="formulario__grupo-input">
+              <input
+                type="text"
+                class="formulario__input"
+                name="masknumber"
+                id="numeroTarjeta"
+                required
+                maxlength="16"
+                minlength="16"
+              />
+              <p id="respuesta"></p>
+              <input id="numeroTarjetaSinNumeral" type="text" name="number" style="display: none" />
+            </div>
+
+            <ul id="error"></ul>
           </div>
-          
-          <ul id="error"></ul>
-        </div>
-        <input type="submit" class="btn" id="btnEnviar" value="Activar" />
-      </form> 
-    </div>
+          <input type="submit" class="btn" id="btnEnviar" value="Activar" />
+        </form>
+      </div>
       <div id="mask"></div>
-     
     </main>
     <footer>
-      <spam>Derechos reservados Kiwi Bank</spam>
+      <div class="pie-de-pagina">
+        <spam>Derechos reservados Kiwi Bank</spam>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+      </div>
     </footer>
     <script src="index.js" type="module"></script>
   </body>

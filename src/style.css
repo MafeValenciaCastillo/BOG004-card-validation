@@ -82,9 +82,7 @@ main {
   padding: 10px;
   cursor: pointer;
 }
-.formulario__grupo-input {
-  position: relative;
-}
+
 .formulario__input {
   width: 100%;
   background: #fff;
@@ -121,12 +119,30 @@ main {
 footer {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   color: #00ff0d;
   background-color: #000;
-  padding: 12px;
+  padding: 16px;
   font-family: "Mulish", sans-serif;
 }
+.pie-de-pagina{
+  display: inline;
+}
+.fab{
+ padding:12px;
+ font-size: 20px;
 
+
+}
+.fa-instagram{
+  color:#ba3eda;
+}
+.fa-youtube{
+  color:#da1414;
+}
+.fa-facebook-square{
+  color:#1628c7;
+}
 .valido {
   color: green;
   font-weight: bold;
