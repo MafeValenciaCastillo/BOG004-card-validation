@@ -4,6 +4,7 @@ const validator = {
     if (isNaN(numeroDetarjetaEnletras)) {
       return false;
     }
+
     // una vez se recibe el numero y se convierte en un arregle de string
     const arregloDenumeros = numeroDetarjetaEnletras.split("").reverse();
     let convertirAnumero = arregloDenumeros.map((numero) => parseInt(numero));
@@ -40,7 +41,7 @@ const validator = {
     console.log("arregloMayorADiez:" + arregloMayorADiez);
     // Suma el total de los números del arreglo anterior
     let sumatotal = arregloMayorADiez.reduce((a, b) => a + b);
-    console.log(sumatotal);
+    // console.log(sumatotal % 10 == 0);
     // Verifica si la suma total es multiplo de 10
     return sumatotal % 10 == 0;
 
@@ -49,6 +50,7 @@ const validator = {
     return numeroDetarjetaEnletras.split('').map((digito, indice) => indice < numeroDetarjetaEnletras.length - 4 ? '#' : digito).join('');
    
   }
+   
   
 };
 
