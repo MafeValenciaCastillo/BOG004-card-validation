@@ -53,7 +53,7 @@ El algoritmo indica que si el resultado de dicha multiplicación es un número =
 
 ![prototipo final](https://drive.google.com/uc?export=download&id=1jphY4jT0mS5CGny2q_JheOrPWjB7N_jE)
 
-
+![pruebas](https://drive.google.com/uc?export=download&id=1IV26ne0-5RvGeXTCqRwHBYga6b3oEQ6sREDmRjpfQX0)
 
 
 

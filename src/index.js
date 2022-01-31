@@ -1,13 +1,13 @@
 import validator from "./validator.js";
-
+let numeroDetarjetaGlobal  = "";
 const mostrarMensaje = (e) => {
-  // console.log(numeroDetarjetaGlobal)
+  console.log(numeroDetarjetaGlobal)
   e.preventDefault();
   const error = document.getElementById("error");
   error.innerHTML = "";
   const respuesta = document.getElementById("respuesta");
   respuesta.innerText = "";
-  let numeroDetarjetaGlobal = document.getElementById("numeroTarjeta").value;
+  
   if (numeroDetarjetaGlobal == "" || numeroDetarjetaGlobal == null) {
     // console.log("<li>por favor diligencia todos los campos</li>");
     error.style.display = "block";
@@ -19,8 +19,6 @@ const mostrarMensaje = (e) => {
     if (esValido) {
       respuesta.className = "";
       respuesta.classList.add("valido");
-     transformarTarjeta();
-      // console.log(respuesta)
       respuesta.innerText = "!El número de tarjeta es válido!";
     } else {
       respuesta.className = "";
@@ -31,9 +29,9 @@ const mostrarMensaje = (e) => {
   }
 };
 const transformarTarjeta = (numeroDeTarjeta) => {
-  //const numeroTarjeta = document.getElementById("numeroTarjeta");
+  const tarjetaOculta = document.getElementById("tarjetaOculta");
   //numeroDetarjetaGlobal = numeroTarjeta.value;
-  numeroTarjeta.value = validator.maskify(numeroDeTarjeta);
+  tarjetaOculta.innerText = validator.maskify(numeroDeTarjeta);
 };
 
 // Se agrega evento al formulario
@@ -43,9 +41,14 @@ formulario.addEventListener("submit", mostrarMensaje);
 // Se agrega evento al input
 const numeroTarjeta = document.getElementById("numeroTarjeta");
 numeroTarjeta.addEventListener("input", (evt) => {
-  if (!isNaN(evt.data)) {
+  if (evt.data === null) { 
+    numeroDetarjetaGlobal = numeroDetarjetaGlobal.substring(0, numeroDetarjetaGlobal.length -1)
+    
+  }else if (!isNaN(evt.data)){
     transformarTarjeta(evt.target.value)
-  } else {
+    numeroDetarjetaGlobal = evt.target.value
+  }
+    else {
     evt.target.value = evt.target.value.replace(/\D+/g, '');
   }
 }, false);

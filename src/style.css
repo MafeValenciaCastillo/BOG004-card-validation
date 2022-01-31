@@ -155,3 +155,6 @@ footer {
   font-weight: bold;
   text-align: center;
 }
+.hidden{
+ visibility: hidden;
+}
